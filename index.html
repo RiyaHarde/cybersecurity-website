@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CyberSafe</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="progressBar"></div>
+
+<!-- NAVBAR -->
+<header>
+<div class="logo"><i class="fa-solid fa-shield-halved"></i> CyberSafe</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#companies">Companies</a>
+<a href="#stats">Stats</a>
+<a href="#login">Login</a>
+<a href="#register">Register</a>
+<a href="#check">URL</a>
+<a href="#feedback">Feedback</a>
+</nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="section">
+<h1 class="hero-title">Protect Your Digital Life</h1>
+
+<p class="hero-text">
+Stay secure online with CyberSafe. Learn to identify threats,
+protect your data, and browse safely in today’s digital world.
+</p>
+
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b" class="hero-img">
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+<h2>About CyberSafe</h2>
+
+<p>CyberSafe is a cyber security awareness platform that educates users about online threats.</p>
+<p>We help you understand phishing, hacking, and data protection in simple terms.</p>
+<p>Our goal is to make the internet safer for everyone through awareness and smart practices.</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card" onclick="openModal('threat')">
+<img src="https://images.unsplash.com/photo-1510519138101-570d1dca3d66">
+<h3><i class="fa-solid fa-bug"></i> Threat Awareness</h3>
+</div>
+
+<div class="card" onclick="openModal('security')">
+<img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de">
+<h3><i class="fa-solid fa-lock"></i> Security Tips</h3>
+</div>
+
+<div class="card" onclick="openModal('help')">
+<img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72">
+<h3><i class="fa-solid fa-life-ring"></i> Emergency Help</h3>
+</div>
+
+</div>
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">&times;</span>
+<h2 id="modalTitle"></h2>
+<p id="modalText"></p>
+</div>
+</div>
+
+<!-- COMPANIES -->
+<section id="companies" class="section">
+<h2>Trusted By</h2>
+
+<div class="company-slider">
+    <div class="company-track">
+        <div><i class="fa-brands fa-google"></i> Google</div>
+        <div><i class="fa-brands fa-microsoft"></i> Microsoft</div>
+        <div><i class="fa-brands fa-amazon"></i> Amazon</div>
+        <div><i class="fa-brands fa-meta"></i> Meta</div>
+        <div><i class="fa-brands fa-ibm"></i> IBM</div>
+
+        <!-- repeat for smooth animation -->
+        <div><i class="fa-brands fa-google"></i> Google</div>
+        <div><i class="fa-brands fa-microsoft"></i> Microsoft</div>
+        <div><i class="fa-brands fa-amazon"></i> Amazon</div>
+    </div>
+</div>
+</section>
+
+<!-- STATS -->
+<section id="stats" class="section">
+<h2>Our Impact</h2>
+
+<div class="stats">
+<div class="stat">
+<i class="fa-solid fa-users"></i>
+<h3 id="users">0</h3>
+<p>Users</p>
+</div>
+
+<div class="stat">
+<i class="fa-solid fa-globe"></i>
+<h3 id="sites">0</h3>
+<p>Sites Checked</p>
+</div>
+
+<div class="stat">
+<i class="fa-solid fa-shield"></i>
+<h3 id="rate">0%</h3>
+<p>Awareness</p>
+</div>
+</div>
+</section>
+
+<!-- LOGIN -->
+<section id="login" class="section">
+<h2><i class="fa-solid fa-user"></i> Login</h2>
+
+<form onsubmit="return validateLogin()">
+<input id="loginUser" placeholder="Username">
+<input id="loginPass" type="password" placeholder="Password">
+<button>Login</button>
+</form>
+</section>
+
+<!-- REGISTER -->
+<section id="register" class="section">
+<h2><i class="fa-solid fa-user-plus"></i> Register</h2>
+
+<form onsubmit="return validateRegister()">
+<input id="regName" placeholder="Name">
+<input id="regEmail" placeholder="Email">
+<input id="regPass" type="password" placeholder="Password">
+<input id="regConfirm" type="password" placeholder="Confirm Password">
+<button>Register</button>
+</form>
+</section>
+
+<!-- URL CHECK -->
+<section id="check" class="section">
+<h2><i class="fa-solid fa-link"></i> Check URL</h2>
+
+<input id="urlInput" placeholder="Enter URL here">
+<br>
+<button onclick="checkURL()">Check</button>
+
+<p id="urlResult"></p>
+</section>
+
+<!-- FEEDBACK -->
+<section id="feedback" class="section">
+<h2><i class="fa-solid fa-comment"></i> Feedback</h2>
+
+<form onsubmit="return validateFeedback()">
+<input id="fbName" placeholder="Name">
+<input id="fbEmail" placeholder="Email">
+<textarea id="fbMessage"></textarea>
+<button>Submit</button>
+</form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="footer-container">
+
+<div>
+<h3>CyberSafe</h3>
+<p>Protecting your digital life with awareness and security tools.</p>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>Email: support@cybersafe.com</p>
+<p>Phone: +91 9876543210</p>
+</div>
+
+<div>
+<h4>Follow Us</h4>
+<p><i class="fa-brands fa-instagram"></i> Instagram</p>
+<p><i class="fa-brands fa-twitter"></i> Twitter</p>
+<p><i class="fa-brands fa-linkedin"></i> LinkedIn</p>
+</div>
+
+</div>
+
+<p class="copy">© 2026 CyberSafe</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
